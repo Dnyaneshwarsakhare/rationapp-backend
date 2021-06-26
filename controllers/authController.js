@@ -397,13 +397,13 @@ module.exports.stock_update_post = async (req ,res) => {
         stock.save()
         .then(()=> 
         res.json('Stock Details updated'),
-        // sendMail(email,subject, text, function(err, data){
-        //     if(err){
-        //         res.status(500).json({message : "Internal Error"});
-        //     }else{
-        //         res.json({message : "EMAIL sent !"});
-        //     }
-        // })
+        sendMail(email,subject, text, function(err, data){
+            if(err){
+                res.status(500).json({message : "Internal Error"});
+            }else{
+                res.json({message : "EMAIL sent !"});
+            }
+        })
         )
         .catch(err => res.status(400).json("Error :" +err));
     })
