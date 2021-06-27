@@ -332,7 +332,7 @@ module.exports.admin_supply_stock = async (req ,res) => {
     };
 
     const subject = "Notify : Ration Stock Allocated"
-    const text = "<p><h3>Dear Ration Card Holder,</h3><br> The Ration Stock for the month of <h4>"+supply.monthyear+"</h4> is allocated.<br>Please visit to your Ration shopkeeper to get your ration. If you found any improper activity while taking ration from the shopkeeper, please feel free to register complaint in Ration Corruption Control System.<br> Visit here : </p>"
+    const text = "<p><h3>Dear Ration Card Holder,</h3><br> The Ration Stock for the month of <h4>"+supply.monthyear+"</h4> is allocated.<br>Please visit to your Ration shopkeeper to get your ration. If you found any improper activity while taking ration from the shopkeeper, please feel free to register complaint in Ration Corruption Control System.<br> Visit here : https://rationapp.netlify.app/complaint </p>"
     const email = "dnyaneshwarsakhare22@gmail.com"
     
 
