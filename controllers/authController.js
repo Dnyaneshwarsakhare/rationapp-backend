@@ -426,7 +426,7 @@ module.exports.forgot_password = (req ,res) => {
                 id : data._id,
             }
             const token = jwt.sign(payload,secret,{expiresIn:"15m"});
-            const link = `https://rationapp.netlify.app/reset-password/${data._id}/${token}`;
+            const link = `https://rationapp-frontend.herokuapp.com/reset-password/${data._id}/${token}`;
             console.log(link);
 
             const subject = "Password Reset Link : Ration Corruption Control System"
